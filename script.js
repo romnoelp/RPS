@@ -1,3 +1,6 @@
+let computerScore = 0;
+let humanScore = 0;
+
 let getComputerChoice = () => {
   let choices = ["rock", "paper", "scissors"];
   let computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -6,26 +9,12 @@ let getComputerChoice = () => {
   return computerChoice;
 };
 
-let getHumanChoice = () => {
-  let choice = prompt("Give me your answer, boi.");
-  return choice.toLocaleLowerCase();
-};
+const rockButton = document.querySelector(".rock")
 
-let computerScore = 0;
-let humanScore = 0;
+const paperButton = document.querySelector(".paper");
 
-function playRound(humanChoice, computerChoice) {
-  if (humanChoice === computerChoice) {
-    console.log("Draw");
-  } else if (humanChoice == "rock" && computerChoice == "paper") {
-    console.log("Computer won");
-  } else if (humanChoice == "paper" && computerChoice == "scissor") {
-    console.log("Computer won");
-  } else if (humanChoice == "paper" && computerChoice == "rock") {
-    console.log("Human won");
-  } else if (humanChoice == "scissor" && computerChoice == "paper") {
-    console.log("Human won");
-  }
+const scissorButton = document.querySelector(".scissor");
+
+function getHumanChoice(event) {
+  
 }
-
-playRound(getHumanChoice(), getComputerChoice());
